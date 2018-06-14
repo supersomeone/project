@@ -1,30 +1,15 @@
 package com.project.telecom.adminmag.daohandle;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import com.project.telecom.beans.AdminBean;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:57
+ * @created 14-6ï¿½ï¿½-2018 9:25:57
  */
-public interface IHandleAdminDao {
+public interface IHandleAdminDao extends JpaRepository<AdminBean, Long>{
 
-	/**
-	 * 
-	 * @param admin
-	 */
-	public void addAdmin(AdminBean admin);
-
-	/**
-	 * 
-	 * @param admin
-	 */
-	public void deleteAdmin(AdminBean admin);
-
-	/**
-	 * 
-	 * @param admin
-	 */
-	public void updateAdmin(AdminBean admin);
-
+	
 }
