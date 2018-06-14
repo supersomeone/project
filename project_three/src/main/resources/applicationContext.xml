@@ -122,8 +122,8 @@
 		scope="prototype">
 		<property name="patterns">
 			<list>
-				<value>com.project.telecom.*mag.service.*</value>
-				<value>com.project.telecom.*mag.dao.*</value>
+				<value>com.project.telecom.*mag.service*.*</value>
+				<value>com.project.telecom.*mag.dao*.*</value>
 			</list>
 		</property>
 	</bean>
@@ -144,7 +144,7 @@
 		<!-- 扫描ORM映射关系 -->
 		<property name="packagesToScan">
 			<list>
-				<value>com.project.telecom</value>
+				<value>com.project.telecom.beans</value>
 			</list>
 		</property>
 		<property name="jpaProperties">
@@ -208,11 +208,11 @@
 	
 	<aop:config>
 		<aop:pointcut id="operation"
-			expression="execution(* com.project.telecom.*mag.service.impl.*ServiceImpl.*(..))" />
+			expression="execution(* com.project.telecom.*mag.servicehandle.impl.*ServiceImpl.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="operation" />
 	</aop:config>
 	<!-- 将JPA接口与SessionFactory进行关联 -->
-	<jpa:repositories base-package="com.study.ssj"
+	<jpa:repositories base-package="com.project.telecom"
 		entity-manager-factory-ref="localEntityManagerFactoryBean">
 	</jpa:repositories>
 	
