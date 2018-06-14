@@ -1,5 +1,6 @@
 package com.project.telecom.logmag.servicequery;
 
+import java.util.List;
 import java.util.Map;
 
 import com.project.telecom.beans.OperationLogBean;
@@ -14,15 +15,14 @@ public interface IOperationlogServicequery {
 
 	/**
 	 * 
-	 * @param id
+	 * @param map
 	 */
-	public OperationLogBean findAllById(int id);
+	public int findAllByNum(Map map);
 
 	/**
 	 * 
-	 * @param pager
 	 * @param map
 	 */
-	public Pager findPagerByOperationLogBean(Pager pager, Map map);
+	public List<OperationLogBean> findPagerByOperationLogBean(Map map);
 
 }

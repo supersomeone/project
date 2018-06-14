@@ -1,5 +1,6 @@
 package com.project.telecom.logmag.servicequery;
 
+import java.util.List;
 import java.util.Map;
 
 import com.project.telecom.beans.LoginLogBean;
@@ -14,15 +15,15 @@ public interface ILoginlogServicequery {
 
 	/**
 	 * 
-	 * @param id
+	 * @param map
 	 */
-	public LoginLogBean findAllById(int id);
+	public int findAllByNum(Map map);
 
 	/**
 	 * 
-	 * @param pager
 	 * @param map
 	 */
-	public Pager findPagerByLoginlogBean(Pager pager, Map map);
+	public List<LoginLogBean> findPagerByLoginlogBean(Map map);
+
 
 }

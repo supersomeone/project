@@ -1,5 +1,8 @@
 package com.project.telecom.logmag.daoquery;
 
+import java.util.List;
+import java.util.Map;
+
 import com.project.telecom.beans.OperationLogBean;
 import com.project.telecom.beans.Pager;
 
@@ -12,14 +15,14 @@ public interface IOperationlogDaoquery {
 
 	/**
 	 * 
-	 * @param id
+	 * @param map
 	 */
-	public int findAllById(OperationLogBean id);
+	public int findAllByNum(Map map);
 
 	/**
 	 * 
-	 * @param pager
+	 * @param map
 	 */
-	public int findPagerByOperationLogBean(Pager pager);
+	public List<OperationLogBean> findPagerByOperationLogBean(Map map);
 
 }
