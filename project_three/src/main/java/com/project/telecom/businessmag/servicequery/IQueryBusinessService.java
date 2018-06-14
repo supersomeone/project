@@ -1,12 +1,12 @@
 package com.project.telecom.businessmag.servicequery;
 
+import com.project.telecom.beans.Pager;
 import com.project.telecom.beans.ServiceBean;
-import com.project.telecom.beans.PagerBean;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:58
+ * @created 14-6ï¿½ï¿½-2018 9:25:58
  */
 public interface IQueryBusinessService {
 
@@ -20,6 +20,6 @@ public interface IQueryBusinessService {
 	 * 
 	 * @param pager
 	 */
-	public PagerBean findPagerByBusinessBean(PagerBean pager);
+	public Pager findPagerByBusinessBean(Pager pager);
 
 }

@@ -1,12 +1,12 @@
 package com.project.telecom.businessmag.daoquery;
 
 import com.project.telecom.beans.ServiceBean;
-import com.project.telecom.beans.PagerBean;
+import com.project.telecom.beans.Pager;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:58
+ * @created 14-6ï¿½ï¿½-2018 9:25:58
  */
 public interface IQueryBusinessDao {
 
@@ -20,6 +20,6 @@ public interface IQueryBusinessDao {
 	 * 
 	 * @param pager
 	 */
-	public PagerBean findPagerByBusinessBean(PagerBean pager);
+	public Pager findPagerByBusinessBean(Pager pager);
 
 }

@@ -3,12 +3,12 @@ package com.project.telecom.logmag.servicequery;
 import java.util.Map;
 
 import com.project.telecom.beans.OperationLogBean;
-import com.project.telecom.beans.PagerBean;
+import com.project.telecom.beans.Pager;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:57
+ * @created 14-6ï¿½ï¿½-2018 9:25:57
  */
 public interface IOperationlogServicequery {
 
@@ -23,6 +23,6 @@ public interface IOperationlogServicequery {
 	 * @param pager
 	 * @param map
 	 */
-	public PagerBean findPagerByOperationLogBean(PagerBean pager, Map map);
+	public Pager findPagerByOperationLogBean(Pager pager, Map map);
 
 }

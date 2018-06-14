@@ -1,12 +1,12 @@
 package com.project.telecom.reportmag.servicequery;
 
 import com.project.telecom.beans.AccountBean;
-import com.project.telecom.beans.PagerBean;
+import com.project.telecom.beans.Pager;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:56
+ * @created 14-6ï¿½ï¿½-2018 9:25:56
  */
 public interface IAccountService {
 
@@ -20,6 +20,6 @@ public interface IAccountService {
 	 * 
 	 * @param pager
 	 */
-	public PagerBean findPagerByAccountBean(PagerBean pager);
+	public Pager findPagerByAccountBean(Pager pager);
 
 }

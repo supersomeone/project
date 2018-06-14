@@ -3,14 +3,14 @@ package com.project.telecom.adminmag.dao;
 import java.util.Map;
 
 import com.project.telecom.beans.AdminBean;
-import com.project.telecom.beans.PagerBean;
+import com.project.telecom.beans.Pager;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:58
+ * @created 14-6ï¿½ï¿½-2018 9:25:58
  */
-public interface IQueryAccountDao {
+public interface IQueryAdminDao {
 
 	/**
 	 * 
@@ -23,6 +23,6 @@ public interface IQueryAccountDao {
 	 * @param pager
 	 * @param map
 	 */
-	public PagerBean findPagerByAdminBean(PagerBean pager, Map map);
+	public Pager findPagerByAdminBean(Pager pager, Map map);
 
 }

@@ -1,12 +1,12 @@
 package com.project.telecom.logmag.daoquery;
 
 import com.project.telecom.beans.OperationLogBean;
-import com.project.telecom.beans.PagerBean;
+import com.project.telecom.beans.Pager;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:57
+ * @created 14-6ï¿½ï¿½-2018 9:25:57
  */
 public interface IOperationlogDaoquery {
 
@@ -20,6 +20,6 @@ public interface IOperationlogDaoquery {
 	 * 
 	 * @param pager
 	 */
-	public int findPagerByOperationLogBean(PagerBean pager);
+	public int findPagerByOperationLogBean(Pager pager);
 
 }
