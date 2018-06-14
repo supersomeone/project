@@ -2,7 +2,6 @@ package com.project.telecom.adminmag.servicehandle.impl;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.project.telecom.adminmag.daohandle.IHandleAdminDao;
@@ -32,7 +31,11 @@ public class HandleAdminServiceImpl implements IHandleAdminService{
 
 	@Override
 	public void updateAdmin(AdminBean admin) {
-		
+		iHandleAdminDao.saveAndFlush(admin);
 	}
+	
+	public AdminBean findAdmin(long id) {
+		return iHandleAdminDao.findOne(id);
+	};
 
 }
