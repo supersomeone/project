@@ -11,6 +11,7 @@ import com.project.telecom.beans.OperationLogBean;
  * @version 1.0
  * @created 14-6��-2018 9:25:57
  */
+
 public interface IOperationlogDaohandle extends JpaRepository<OperationLogBean, Long>,JpaSpecificationExecutor<OperationLogBean>{
 
 

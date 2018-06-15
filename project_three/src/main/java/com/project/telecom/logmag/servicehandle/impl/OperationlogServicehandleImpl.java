@@ -13,7 +13,7 @@ public class OperationlogServicehandleImpl implements IOperationlogServicehandle
 	@Resource
 	private IOperationlogDaohandle operationlogDaohandle;
 	@Override
-	public void AddOperation(OperationLogBean operationLog) {
+	public void addOperation(OperationLogBean operationLog) {
 		// TODO Auto-generated method stub
 		operationlogDaohandle.save(operationLog);
 	}

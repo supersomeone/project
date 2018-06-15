@@ -3,7 +3,13 @@ package com.project.telecom.logmag.servicequery.impl;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
 import com.project.telecom.beans.LoginLogBean;
+import com.project.telecom.logmag.daohandle.ILoginlogDaohandle;
+import com.project.telecom.logmag.daoquery.ILoginlogDaoquery;
 import com.project.telecom.logmag.servicequery.ILoginlogServicequery;
 
 /**
@@ -11,18 +17,20 @@ import com.project.telecom.logmag.servicequery.ILoginlogServicequery;
  * @version 1.0
  * @created 14-6��-2018 9:25:58
  */
+@Service
 public class LoginlogServicequeryImpl implements ILoginlogServicequery{
-
+	@Resource
+	private ILoginlogDaoquery loginlogDaoqueryImpl;
 	@Override
 	public int findAllByNum(Map map) {
 		// TODO Auto-generated method stub
-		return 0;
+		return loginlogDaoqueryImpl.findAllByNum(map);
 	}
 
 	@Override
 	public List<LoginLogBean> findPagerByLoginlogBean(Map map) {
 		// TODO Auto-generated method stub
-		return null;
+		return loginlogDaoqueryImpl.findPagerByLoginlogBean(map);
 	}
 
 	

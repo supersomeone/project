@@ -10,7 +10,7 @@ import com.project.telecom.beans.LoginLogBean;
  * @version 1.0
  * @created 14-6��-2018 9:25:57
  */
-public interface ILoginlogDaohandle extends JpaRepository<LoginLogBean, Long>,JpaSpecificationExecutor<LoginLogBean>{
+public interface ILoginlogDaohandle extends JpaRepository<LoginLogBean, Long>{
 
 
 }

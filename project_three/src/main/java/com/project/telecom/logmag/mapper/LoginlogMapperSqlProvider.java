@@ -5,9 +5,9 @@ import java.util.Map;
 import com.mysql.jdbc.StringUtils;
 
 public class LoginlogMapperSqlProvider {
-	public String countUserListByMapToPager(Map<String, Object> params) {
+	public String findAllByNum(Map<String, Object> params) {
 		Map<String, Object> map = (Map<String, Object>) params.get("map");
-		StringBuilder sb = new StringBuilder("select count(*) from t_login_log where 1=1");
+		StringBuilder sb = new StringBuilder("select count(*) from t_login_log where 1=1 ");
 		if ((map.get("name")!=null)) {
 			sb.append("and name like '"+map.get("name")+"%'");
 		}else if ((map.get("ip")!=null)) {
@@ -21,9 +21,9 @@ public class LoginlogMapperSqlProvider {
 		return sb.toString();
 	}
 	
-	public String getUserListByMapToPager(Map<String, Object> params) {
+	public String findPagerByLoginlogBean(Map<String, Object> params) {
 		Map<String, Object> map = (Map<String, Object>) params.get("map");
-		StringBuilder sb = new StringBuilder("select * from t_user where 1=1");
+		StringBuilder sb = new StringBuilder("select * from t_login_log where 1=1 ");
 		if ((map.get("name")!=null)) {
 			sb.append("and name like '"+map.get("name")+"%'");
 		}else if ((map.get("ip")!=null)) {
