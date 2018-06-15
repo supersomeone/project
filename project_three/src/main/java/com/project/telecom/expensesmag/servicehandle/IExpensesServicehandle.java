@@ -14,15 +14,20 @@ public interface IExpensesServicehandle {
 
 	/**
 	 * 
-	 * @param pager
-	 * @param map
+	 * @param pricing
 	 */
-	public Pager getPagerBeanByPricingBean(Pager pager, Map map);
+	public void deletePricingBean(PricingBean pricing);
 
 	/**
 	 * 
 	 * @param pricing
 	 */
-	public PricingBean getPricingBeanById(PricingBean pricing);
+	public void savePricingBean(PricingBean pricing);
+
+	/**
+	 * 
+	 * @param pricing
+	 */
+	public void updatePricingBean(PricingBean pricing);
 
 }

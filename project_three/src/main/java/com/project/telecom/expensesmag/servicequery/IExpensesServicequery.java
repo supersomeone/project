@@ -1,30 +1,33 @@
 package com.project.telecom.expensesmag.servicequery;
 
+import java.util.List;
+import java.util.Map;
+
 import com.project.telecom.beans.PricingBean;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:56
+ * @created 14-6ï¿½ï¿½-2018 9:25:56
  */
 public interface IExpensesServicequery {
 
 	/**
 	 * 
-	 * @param pricing
+	 * @param pager
+	 * @param map
 	 */
-	public void deletePricingBean(PricingBean pricing);
+	public int getPagerBeanByNum();
 
 	/**
 	 * 
 	 * @param pricing
 	 */
-	public void savePricingBean(PricingBean pricing);
-
+	public PricingBean getPricingBeanById(long id);
 	/**
 	 * 
 	 * @param pricing
 	 */
-	public void updatePricingBean(PricingBean pricing);
+	public List<PricingBean> getPricingBeanByPagers(Map map);
 
 }
