@@ -33,7 +33,7 @@ public class LoginlogMapperSqlProvider {
 		}else if ((map.get("endtime")!=null)) {
 			sb.append("and time < '"+map.get("endtime"));
 		}
-		sb.append(" limit "+map.get("begin")+","+map.get("rows"));
+		sb.append(" limit "+map.get("index")+","+map.get("rows"));
 		return sb.toString();
 	}
 

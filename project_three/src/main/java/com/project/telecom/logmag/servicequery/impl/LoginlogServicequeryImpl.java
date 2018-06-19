@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.project.telecom.beans.LoginLogBean;
+import com.project.telecom.beans.Pager;
 import com.project.telecom.logmag.daohandle.ILoginlogDaohandle;
 import com.project.telecom.logmag.daoquery.ILoginlogDaoquery;
 import com.project.telecom.logmag.servicequery.ILoginlogServicequery;
@@ -26,12 +27,17 @@ public class LoginlogServicequeryImpl implements ILoginlogServicequery{
 		// TODO Auto-generated method stub
 		return loginlogDaoqueryImpl.findAllByNum(map);
 	}
-
 	@Override
-	public List<LoginLogBean> findPagerByLoginlogBean(Map map) {
+	public Pager findPagerByLoginlogBean(Pager pager, Map map) {
 		// TODO Auto-generated method stub
-		return loginlogDaoqueryImpl.findPagerByLoginlogBean(map);
+		int totalRows = loginlogDaoqueryImpl.findAllByNum(map);
+		List<?> datas = loginlogDaoqueryImpl.findPagerByLoginlogBean(map);
+		pager.setTotalRows(totalRows);
+		pager.setDatas(datas);
+		return pager;
 	}
+
+	
 
 	
 

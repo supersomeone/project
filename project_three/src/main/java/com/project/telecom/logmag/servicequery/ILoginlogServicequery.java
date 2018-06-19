@@ -23,7 +23,7 @@ public interface ILoginlogServicequery {
 	 * 
 	 * @param map
 	 */
-	public List<LoginLogBean> findPagerByLoginlogBean(Map map);
+	public Pager findPagerByLoginlogBean(Pager pager,Map map);
 
 
 }

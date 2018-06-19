@@ -23,6 +23,6 @@ public interface IOperationlogServicequery {
 	 * 
 	 * @param map
 	 */
-	public List<OperationLogBean> findPagerByOperationLogBean(Map map);
+	public Pager findPagerByOperationLogBean(Pager pager,Map map);
 
 }
