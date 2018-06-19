@@ -4,9 +4,9 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.project.telecom.accountingmag.daohandle.IHandleAccountDao;
 import com.project.telecom.beans.AccountBean;
 import com.project.telecom.beans.AdminBean;
-import com.project.telecom.loginmag.daohendle.IHandleAccountDao;
 import com.project.telecom.loginmag.daohendle.IHandleLoginDao;
 import com.project.telecom.loginmag.servicehandle.IHandleLoginService;
 
