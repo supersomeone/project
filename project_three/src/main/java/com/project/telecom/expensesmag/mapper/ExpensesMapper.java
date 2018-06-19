@@ -32,6 +32,17 @@ public interface ExpensesMapper {
 	 * 
 	 * @param pricing
 	 */
+	@Results({
+		@Result(id=true,property="id",column="id",javaType=Long.class),
+		@Result(property="pricingName",column="pricing_name",javaType=String.class),
+		@Result(property="pricingType",column="pricing_type",javaType=Integer.class),
+		@Result(property="basictime",column="basictime",javaType=Integer.class),
+		@Result(property="charge",column="charge",javaType=Double.class),
+		@Result(property="unitcost",column="unitcost",javaType=Double.class),
+		@Result(property="opentime",column="opentime",javaType=Date.class),
+		@Result(property="pricingFee",column="pricing_fee",javaType=String.class),
+		@Result(property="pricingState",column="pricing_state",javaType=Integer.class)
+	})
 	@Select(value="select * from t_pricing where id=#{id}")
 	public PricingBean getPricingBeanById(@Param("id")long id);
 	/**
