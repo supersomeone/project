@@ -1,42 +1,17 @@
 package com.project.telecom.businessmag.daohandle;
 
-import com.project.telecom.beans.ServiceBean;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import com.project.telecom.beans.BusinessBean;
 
 /**
- * @author ASUS
+ * @author xc
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:57
+ * @created 14-6ï¿½ï¿½-2018 9:25:57
  */
-public interface IHandleBusinessDao {
+public interface IHandleBusinessDao extends JpaRepository<BusinessBean, Long>,JpaSpecificationExecutor<BusinessBean>{
 
-	/**
-	 * 
-	 * @param business
-	 */
-	public void addBusiness(ServiceBean business);
-
-	/**
-	 * 
-	 * @param business
-	 */
-	public void closeBusiness(ServiceBean business);
-
-	/**
-	 * 
-	 * @param business
-	 */
-	public void deleteBusiness(ServiceBean business);
-
-	/**
-	 * 
-	 * @param business
-	 */
-	public void openBusiness(ServiceBean business);
-
-	/**
-	 * 
-	 * @param business
-	 */
-	public void updateBusiness(ServiceBean business);
 
 }
