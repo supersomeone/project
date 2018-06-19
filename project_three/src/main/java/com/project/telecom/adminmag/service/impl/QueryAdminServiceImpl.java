@@ -1,19 +1,34 @@
 package com.project.telecom.adminmag.service.impl;
 
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.project.telecom.adminmag.dao.IQueryAdminDao;
+import com.project.telecom.adminmag.service.IQueryAdminService;
+import com.project.telecom.beans.AdminBean;
+import com.project.telecom.beans.Pager;
 
 /**
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:59
+ * @created 14-6ï¿½ï¿½-2018 9:25:59
  */
-public class QueryAdminServiceImpl {
+@Service
+public class QueryAdminServiceImpl implements IQueryAdminService{
+	@Resource
+	private IQueryAdminDao queryAdminDaoImpl;
 
-	public QueryAdminServiceImpl(){
-
+	@Override
+	public AdminBean findById(long id) {
+		// TODO Auto-generated method stub
+		return queryAdminDaoImpl.findById(id);
 	}
 
-	public void finalize() throws Throwable {
-
+	@Override
+	public Pager findPagerByAdminBean(Pager pager) {
+		// TODO Auto-generated method stub
+		return queryAdminDaoImpl.findPagerByAdminBean(pager);
 	}
-
+	
 }

@@ -9,7 +9,7 @@ import com.project.telecom.adminmag.servicehandle.IHandleAdminService;
 import com.project.telecom.beans.AdminBean;
 
 /**
- * @author ASUS
+ * @author xc
  * @version 1.0
  * @created 14-6��-2018 9:25:56
  */
