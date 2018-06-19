@@ -2,44 +2,44 @@ package com.project.telecom.beans;
 
 
 /**
- * ÒµÎñÕËºÅÔÂÕËµ¥
+ * ä¸šåŠ¡è´¦å·æœˆè´¦å•
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:26:00
+ * @created 14-6æœˆ-2018 9:26:00
  */
 public class ServicemonthBean {
 
 	/**
-	 * ÕËÎñÕËºÅ
+	 * è´¦åŠ¡è´¦å·
 	 */
 	private String accountId;
 	/**
-	 * ·ÑÓÃ
+	 * è´¹ç”¨
 	 */
 	private double cahrge;
 	private long id;
 	/**
-	 * ·şÎñÆ÷ĞÅÏ¢
+	 * æœåŠ¡å™¨ä¿¡æ¯
 	 */
 	private String ip;
 	/**
-	 * ÔÂ
+	 * æœˆ
 	 */
 	private int month;
 	/**
-	 * ÒµÎñÕËºÅ
+	 * ä¸šåŠ¡è´¦å·
 	 */
 	private String osNumber;
 	/**
-	 * ×Ê·ÑÌ×²Í
+	 * èµ„è´¹å¥—é¤
 	 */
 	private int pricing;
 	/**
-	 * Ê±³¤
+	 * æ—¶é•¿
 	 */
 	private double time;
 	/**
-	 * Äê
+	 * å¹´
 	 */
 	private int year;
 
@@ -47,8 +47,97 @@ public class ServicemonthBean {
 
 	}
 
-	public void finalize() throws Throwable {
-
+	public ServicemonthBean(String accountId, double cahrge, String ip, int month, String osNumber, int pricing,
+			double time, int year) {
+		super();
+		this.accountId = accountId;
+		this.cahrge = cahrge;
+		this.ip = ip;
+		this.month = month;
+		this.osNumber = osNumber;
+		this.pricing = pricing;
+		this.time = time;
+		this.year = year;
 	}
 
+	public String getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+
+	public double getCahrge() {
+		return cahrge;
+	}
+
+	public void setCahrge(double cahrge) {
+		this.cahrge = cahrge;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public String getOsNumber() {
+		return osNumber;
+	}
+
+	public void setOsNumber(String osNumber) {
+		this.osNumber = osNumber;
+	}
+
+	public int getPricing() {
+		return pricing;
+	}
+
+	public void setPricing(int pricing) {
+		this.pricing = pricing;
+	}
+
+	public double getTime() {
+		return time;
+	}
+
+	public void setTime(double time) {
+		this.time = time;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	@Override
+	public String toString() {
+		return "ServicemonthBean [accountId=" + accountId + ", cahrge=" + cahrge + ", id=" + id + ", ip=" + ip
+				+ ", month=" + month + ", osNumber=" + osNumber + ", pricing=" + pricing + ", time=" + time + ", year="
+				+ year + "]";
+	}
+
+	
 }

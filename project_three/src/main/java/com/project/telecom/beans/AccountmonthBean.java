@@ -2,41 +2,41 @@ package com.project.telecom.beans;
 
 
 /**
- * ÕËÎñÕËºÅÔÂÕËµ¥
+ * è´¦åŠ¡è´¦å·æœˆè´¦å•
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:25:54
+ * @created 14-6æœˆ-2018 9:25:54
  */
 public class AccountmonthBean {
 
 	/**
-	 * ÕËÎñÕËºÅ
+	 * è´¦åŠ¡å¤–è”è¡¨
 	 */
-	private String accountNumber;
+	private AccountBean accounts;
 	/**
-	 * ·ÑÓÃ
+	 * è´¹ç”¨
 	 */
 	private double charge;
 	private long id;
 	private String ip;
 	/**
-	 * ÔÂ·İ
+	 * æœˆä»½
 	 */
 	private int month;
 	/**
-	 * Ö§¸¶·½Ê½
+	 * æ”¯ä»˜æ–¹å¼
 	 */
 	private String payment;
 	/**
-	 * Ö§¸¶×´Ì¬
+	 * æ”¯ä»˜çŠ¶æ€
 	 */
 	private int payState;
 	/**
-	 * Ê¹ÓÃÊ±³¤
+	 * ä½¿ç”¨æ—¶é•¿
 	 */
 	private int time;
 	/**
-	 * Äê
+	 * å¹´
 	 */
 	private int year;
 
@@ -44,8 +44,98 @@ public class AccountmonthBean {
 
 	}
 
-	public void finalize() throws Throwable {
-
+	public AccountmonthBean(AccountBean accounts, double charge, String ip, int month, String payment, int payState,
+			int time, int year) {
+		super();
+		this.accounts = accounts;
+		this.charge = charge;
+		this.ip = ip;
+		this.month = month;
+		this.payment = payment;
+		this.payState = payState;
+		this.time = time;
+		this.year = year;
 	}
+
+	public AccountBean getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(AccountBean accounts) {
+		this.accounts = accounts;
+	}
+
+	public double getCharge() {
+		return charge;
+	}
+
+	public void setCharge(double charge) {
+		this.charge = charge;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public String getPayment() {
+		return payment;
+	}
+
+	public void setPayment(String payment) {
+		this.payment = payment;
+	}
+
+	public int getPayState() {
+		return payState;
+	}
+
+	public void setPayState(int payState) {
+		this.payState = payState;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	@Override
+	public String toString() {
+		return "AccountmonthBean [accounts=" + accounts + ", charge=" + charge + ", id=" + id + ", ip=" + ip
+				+ ", month=" + month + ", payment=" + payment + ", payState=" + payState + ", time=" + time + ", year="
+				+ year + "]";
+	}
+
+	
 
 }

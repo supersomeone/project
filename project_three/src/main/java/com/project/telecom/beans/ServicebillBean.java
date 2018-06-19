@@ -3,40 +3,40 @@ package com.project.telecom.beans;
 import java.util.Date;
 
 /**
- * ÒµÎñÕËµ¥±í
+ * ä¸šåŠ¡è´¦å•è¡¨
  * @author ASUS
  * @version 1.0
- * @created 14-6ÔÂ-2018 9:26:00
+ * @created 14-6æœˆ-2018 9:26:00
  */
 public class ServicebillBean {
 
 	/**
-	 * ·ÑÓÃ
+	 * è´¹ç”¨
 	 */
 	private double charge;
 	private long id;
 	/**
-	 * ·şÎñÆ÷ip
+	 * æœåŠ¡å™¨ip
 	 */
 	private String ip;
 	/**
-	 * µÇÈëÊ±¼ä
+	 * ç™»å…¥æ—¶é—´
 	 */
 	private Date loginTime;
 	/**
-	 * µÇ³öÊ±¼ä
+	 * ç™»å‡ºæ—¶é—´
 	 */
 	private Date logoutTime;
 	/**
-	 * ÒµÎñÕËºÅ
+	 * ä¸šåŠ¡è´¦å·
 	 */
 	private String osNumber;
 	/**
-	 * ×Ê·ÑÌ×²Í
+	 * èµ„è´¹å¥—é¤
 	 */
-	private String pricing;
+	private int pricing;
 	/**
-	 * Ê¹ÓÃÊ±³¤
+	 * ä½¿ç”¨æ—¶é•¿
 	 */
 	private int time;
 
@@ -44,8 +44,88 @@ public class ServicebillBean {
 
 	}
 
-	public void finalize() throws Throwable {
-
+	public ServicebillBean(double charge, String ip, Date loginTime, Date logoutTime, String osNumber, int pricing,
+			int time) {
+		super();
+		this.charge = charge;
+		this.ip = ip;
+		this.loginTime = loginTime;
+		this.logoutTime = logoutTime;
+		this.osNumber = osNumber;
+		this.pricing = pricing;
+		this.time = time;
 	}
+
+	public double getCharge() {
+		return charge;
+	}
+
+	public void setCharge(double charge) {
+		this.charge = charge;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+
+	public Date getLoginTime() {
+		return loginTime;
+	}
+
+	public void setLoginTime(Date loginTime) {
+		this.loginTime = loginTime;
+	}
+
+	public Date getLogoutTime() {
+		return logoutTime;
+	}
+
+	public void setLogoutTime(Date logoutTime) {
+		this.logoutTime = logoutTime;
+	}
+
+	public String getOsNumber() {
+		return osNumber;
+	}
+
+	public void setOsNumber(String osNumber) {
+		this.osNumber = osNumber;
+	}
+
+	public int getPricing() {
+		return pricing;
+	}
+
+	public void setPricing(int pricing) {
+		this.pricing = pricing;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
+	}
+
+	@Override
+	public String toString() {
+		return "ServicebillBean [charge=" + charge + ", id=" + id + ", ip=" + ip + ", loginTime=" + loginTime
+				+ ", logoutTime=" + logoutTime + ", osNumber=" + osNumber + ", pricing=" + pricing + ", time=" + time
+				+ "]";
+	}
+	
 
 }
