@@ -123,6 +123,10 @@ public class AdminBean implements Serializable{
 		this.telphone = telphone;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public String toString() {
 		return "AdminBean [adminName=" + adminName + ", eamil=" + eamil + ", id=" + id + ", loginName=" + loginName
