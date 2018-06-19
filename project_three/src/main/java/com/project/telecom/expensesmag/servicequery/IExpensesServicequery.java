@@ -3,6 +3,7 @@ package com.project.telecom.expensesmag.servicequery;
 import java.util.List;
 import java.util.Map;
 
+import com.project.telecom.beans.Pager;
 import com.project.telecom.beans.PricingBean;
 
 /**
@@ -28,6 +29,6 @@ public interface IExpensesServicequery {
 	 * 
 	 * @param pricing
 	 */
-	public List<PricingBean> getPricingBeanByPagers(Map map);
+	public Pager getPricingBeanByPagers(Map map,Pager pager);
 
 }

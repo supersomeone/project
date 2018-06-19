@@ -49,7 +49,7 @@ public interface ExpensesMapper {
 		@Result(property="pricingFee",column="pricing_fee",javaType=String.class),
 		@Result(property="pricingState",column="pricing_state",javaType=Integer.class)
 	})
-	@Select(value="select * from t_pricing limit #{map.begin},#{map.rows}")
+	@Select(value="select * from t_pricing limit #{map.index},#{map.rows}")
 	public List<PricingBean> getPricingBeanByPagers(@Param("map")Map map);
 
 }
