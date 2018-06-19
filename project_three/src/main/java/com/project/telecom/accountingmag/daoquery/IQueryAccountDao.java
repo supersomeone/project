@@ -1,5 +1,8 @@
 package com.project.telecom.accountingmag.daoquery;
 
+import java.util.List;
+import java.util.Map;
+
 import com.project.telecom.beans.AccountBean;
 import com.project.telecom.beans.Pager;
 
@@ -11,15 +14,23 @@ import com.project.telecom.beans.Pager;
 public interface IQueryAccountDao {
 
 	/**
-	 * 
+	 * @author xc
+	 *根据id查询账务账号 
 	 * @param account
 	 */
-	public AccountBean findAllById(AccountBean account);
+	public AccountBean findAllById(long id);
 
 	/**
-	 * 
-	 * @param pager
+	 * @author xc
+	 * 根据多参数查询账务账号总条数
+	 * @param map 参数集合
 	 */
-	public int findPagerByAccountBean(Pager pager);
+	public int findPagerByAccountBean(Map map);
+	/**
+	 * @author xc
+	 * 根据多参数查询账务账号集合
+	 * @param pager分页对象
+	 */
+	public List<AccountBean> findAccountsByMapToPager(Map map,Pager pager);
 
 }

@@ -1,50 +1,18 @@
 package com.project.telecom.accountingmag.daohandle;
 
-import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import com.project.telecom.beans.AccountBean;
 
 /**
- * @author ASUS
+ * @author ÂæêË∂Ö
  * @version 1.0
- * @created 14-6‘¬-2018 9:25:57
+ * @created 14-6ÔøΩÔøΩ-2018 9:25:57
  */
-public interface IHandleAccountDao {
+public interface IHandleAccountDao extends JpaRepository<AccountBean, Long>,JpaSpecificationExecutor<AccountBean>{
 
-	/**
-	 * 
-	 * @param account
-	 */
-	public void addAccount(AccountBean account);
 
-	/**
-	 * 
-	 * @param account
-	 */
-	public void addManyAccount(List<AccountBean> account);
-
-	/**
-	 * 
-	 * @param account
-	 */
-	public void closeAccount(AccountBean account);
-
-	/**
-	 * 
-	 * @param account
-	 */
-	public void deleteAccount(AccountBean account);
-
-	/**
-	 * 
-	 * @param account
-	 */
-	public void openAccount(AccountBean account);
-
-	/**
-	 * 
-	 * @param account
-	 */
-	public void updateAccount(AccountBean account);
 
 }
