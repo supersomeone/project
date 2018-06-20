@@ -22,7 +22,7 @@
 	<!-- 配置字符集处理过滤器 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
-		<filter-class>com.project.telecom.filters.EncodingFilter</filter-class>
+		<filter-class>com.project.telecom.filters.CharacterEncodingFilter</filter-class>
 		<init-param>
 			<param-name>encoding</param-name>
 			<param-value>utf-8</param-value>
@@ -45,7 +45,7 @@
 	<!-- 配置DELETE表单内容过滤器：将DELETE流传输的数据，转移到消息体中去 -->
 	<filter>
 		<filter-name>httpDeleteFormContentFilter</filter-name>
-		<filter-class>com.yangsir.project.filters.HttpDeleteFormContentFilter</filter-class>
+		<filter-class>com.project.telecom.filters.HttpDeleteFormContentFilter</filter-class>
 	</filter>
 	
 	<!-- 配置Form表单支持PUT,DELETE提交方式的过滤器 -->
@@ -126,7 +126,10 @@
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
+	<servlet-mapping>
+	<servlet-name>default</servlet-name>
+	<url-pattern>*.ftl</url-pattern>
+	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>DruidStatView</servlet-name>
 		<url-pattern>/druid/*</url-pattern>
